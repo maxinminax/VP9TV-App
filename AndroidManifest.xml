@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest android:versionCode="1" android:versionName="1.83" android:windowSoftInputMode="adjustPan" package="com.vp9.tv" xmlns:android="http://schemas.android.com/apk/res/android">
+    <supports-screens android:anyDensity="true" android:largeScreens="true" android:normalScreens="true" android:resizeable="true" android:smallScreens="true" android:xlargeScreens="true" />
+    <compatible-screens>
+        <screen android:screenDensity="ldpi" android:screenSize="normal" />
+        <screen android:screenDensity="mdpi" android:screenSize="normal" />
+        <screen android:screenDensity="hdpi" android:screenSize="normal" />
+        <screen android:screenDensity="xhdpi" android:screenSize="normal" />
+        <screen android:screenDensity="hdpi" android:screenSize="large" />
+        <screen android:screenDensity="xhdpi" android:screenSize="large" />
+        <screen android:screenDensity="hdpi" android:screenSize="large" />
+        <screen android:screenDensity="xhdpi" android:screenSize="xlarge" />
+    </compatible-screens>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.RECORD_VIDEO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.WRITE_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <application android:allowBackup="false" android:hardwareAccelerated="true" android:icon="@drawable/ic_launcher" android:label="@string/app_name" android:name="com.vp9.laucher.main.application.Vp9Application" android:theme="@style/AppTheme">
+        <activity android:configChanges="orientation|screenSize|smallestScreenSize|keyboard|keyboardHidden|navigation" android:launchMode="singleTop" android:name="io.vov.vitamio.activity.InitActivity" android:theme="@android:style/Theme.NoTitleBar" android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:configChanges="orientation|keyboardHidden|screenSize" android:label="@string/app_name" android:launchMode="singleTask" android:name="com.vp9.tv.VpMainActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.NoTitleBar.Fullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:excludeFromRecents="true" android:name="com.vp9.laucher.main.vp9launcher.DummyBrightnessActivity" android:taskAffinity="com.vp9.launcher.main.vp9launcher.Dummy" android:theme="@android:style/Theme.Translucent">
+        </activity>
+        <service android:exported="false" android:label="VP9 Service" android:name=".VpService">
+            <intent-filter>
+                <action android:name="VpService" />
+            </intent-filter>
+        </service>
+        <receiver android:enabled="true" android:exported="true" android:label="Autostart" android:name=".Autostart">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.vp9.tv.Broadcast">
+            <intent-filter>
+                <action android:name="sungale.broadcast.vp9" />
+            </intent-filter>
+        </receiver>
+        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:label="@string/app_name" android:launchMode="singleInstance" android:name="MainActivity" android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale" android:exported="true" android:label="@string/app_name" android:launchMode="standard" android:name="VpMainActivity" android:screenOrientation="landscape" android:theme="@android:style/Theme.Black.NoTitleBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.google.android.gms.version" android:value="4242000" />
+    </application>
+    <uses-sdk android:minSdkVersion="15" android:targetSdkVersion="19" />
+</manifest>
