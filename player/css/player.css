@@ -1,0 +1,313 @@
+.nav {
+    float: left;
+}
+.nav .nav-btn {
+    width: 55px;
+    height: 55px;
+    color: #fff;
+    text-align: center;
+    border: 2px solid #000;
+    border-radius: 5px;
+    margin: 6px 3px 0 3px;
+    text-shadow: 1px 1px 1px #000;
+    background-size: 90% 90%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+    cursor: pointer;
+}
+#nav-btn.hover .nav-btn.hover {
+    -webkit-animation-name: slowflash;
+    animation-name: slowflash;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+.nav .nav-btn span {
+    display: none;
+}
+.nav .nav-btn.disabled, .nav .nav-btn[disabled="disabled"] {
+    pointer-events: none;
+    background-image: none;
+}
+.nav .nav-btn.disabled:before, .nav .nav-btn[disabled="disabled"]:before {
+    display: none;
+}
+.nav .nav-btn.disabled span, .nav .nav-btn[disabled="disabled"] span {
+    pointer-events: none;
+    display: none;
+}
+.nav-back {
+    background-color: rgb(150, 0, 0);
+    background-image: url("../images/back.svg");
+}
+.nav-home {
+    background-color: rgb(0, 150, 0);
+    background-image: url("../images/home.svg");
+    display: none !important;
+}
+.nav-menu {
+    background-color: rgb(200, 200, 0);
+    background-image: url("../images/menu.svg");
+}
+.nav-play {
+    background-color: rgb(0, 0, 150);
+    background-image: url("../images/play.svg");
+}
+.nav-play.pause {
+    background-image: url("../images/pause.svg");
+}
+
+.epg_wrapper.lock {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+.ppdisplay video {
+    background: #000;
+}
+/*.ppcontrols {
+	opacity: 0;
+}*/
+
+.ppcontrols:hover {
+    opacity: 1 !important;
+    display: block !important;
+}
+.ppcontrols.live {
+    height: 65px;
+}
+.ppcontrols.live .nav-play:before {
+    display: none;
+}
+.ppcontrols.live .ppscrubber {
+    display: none;
+}
+.ppcontrols.live .pptimeleft {
+    display: none;
+}
+.ppcontrols.lock {
+    opacity: 1 !important;
+}
+.ppcontrols .ppmsg {
+    color: #fff;
+    line-height: 60px;
+    height: 60px;
+    text-align: center;
+    overflow: hidden;
+    font-size: 25px;
+    padding-left: 10px;
+}
+.ppcontrols .ppmsg p {
+    margin: 0;
+}
+.listSelectLang {
+    display: none;
+    padding-left: 0;
+}
+.listSelectLang:hover {
+    display: block !important;
+}
+.ppsubtitles {
+    font-size: 50px;
+}
+.ppclock {
+    color: #fff;
+    width: 160px;
+    line-height: 60px;
+    height: 60px;
+    border-left: 2px solid #413e3e;
+    border-right: 2px solid #000;
+    text-align: center;
+    overflow: hidden;
+    font-size: 25px;
+    display: none !important;
+}
+.ppmesg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: url('../theme/pk-tv.png') #000 no-repeat center center;
+    background-size: auto 100%;
+    color: #fff;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+    display: none;
+}
+.ppmesg p {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    margin: -20px;
+    text-align: center;
+}
+.pplogo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width: 150px;
+    height: 70px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    background-size: 100% !important;
+    -webkit-animation-name: logo2;
+    animation-name: hidelogo;
+    -webkit-animation-duration: 60s;
+    animation-duration: 60s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+.ppProgramLogo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width: 150px;
+    height: 70px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    background-size: 100% !important;
+    color: #fff;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    font-size: 40px;
+    -webkit-text-shadow: -3px 0 3px #000, 3px 0 3px #000, 0 -3px 3px #000, 0 3px 3px #000;
+    text-shadow: -3px 0 3px #000, 3px 0 3px #000, 0 -3px 3px #000, 0 3px 3px #000;
+    pointer-events: none;
+    -webkit-animation-name: logo1;
+    animation-name: hidelogo;
+    -webkit-animation-duration: 60s;
+    animation-duration: 60s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+.epg_wrapper {
+    display: block;
+}
+.epg_wrapper.invisible {
+    display: none;
+}
+.vp9logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: block;
+    width: 150px;
+    height: 70px;
+    color: #fff;
+    font-weight: bold;
+    line-height: 70px;
+    text-align: center;
+    font-size: 40px;
+    -webkit-text-shadow: -3px 0 3px #000, 3px 0 3px #000, 0 -3px 3px #000, 0 3px 3px #000;
+    text-shadow: -3px 0 3px #000, 3px 0 3px #000, 0 -3px 3px #000, 0 3px 3px #000;
+    pointer-events: none;
+    -webkit-animation-name: logo3;
+    animation-name: logo2;
+    -webkit-animation-duration: 60s;
+    animation-duration: 60s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+    -webkit-animation-iteration-count: infinite;
+}
+/*hungpd*/
+
+@-webkit-keyframes logo1 {
+    0%, 30%, 100% {
+        opacity: 1
+    }
+    35%, 95% {
+        opacity: 0
+    }
+}
+@keyframes logo1 {
+    0%, 30%, 100% {
+        opacity: 1
+    }
+    35%, 95% {
+        opacity: 0
+    }
+}
+@-webkit-keyframes logo2 {
+    0%, 30%, 70%, 100% {
+        opacity: 0
+    }
+    35%, 65% {
+        opacity: 1
+    }
+}
+@keyframes logo2 {
+    0%, 30%, 70%, 100% {
+        opacity: 0
+    }
+    35%, 65% {
+        opacity: 1
+    }
+}
+@-webkit-keyframes logo3 {
+    0%, 70%, 100% {
+        opacity: 0
+    }
+    75%, 95% {
+        opacity: 1
+    }
+}
+@keyframes logo3 {
+    0%, 70%, 100% {
+        opacity: 0
+    }
+    75%, 95% {
+        opacity: 1
+    }
+}
+/*hungpd*/
+
+@-webkit-keyframes showlogo {
+    0%, 70%, 100% {
+        opacity: 0;
+    }
+    75%, 95% {
+        opacity: 1;
+    }
+}
+@keyframes showlogo {
+    0%, 78%, 100% {
+        opacity: 0;
+    }
+    75%, 95% {
+        opacity: 1;
+    }
+}
+@-webkit-keyframes hidelogo {
+    0%, 70%, 100% {
+        opacity: 1;
+    }
+    75%, 95% {
+        opacity: 0;
+    }
+}
+@keyframes hidelogo {
+    0%, 78%, 100% {
+        opacity: 1;
+    }
+    75%, 95% {
+        opacity: 0;
+    }
+}
