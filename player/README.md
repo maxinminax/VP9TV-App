@@ -9,5 +9,27 @@ VP9TV's player
 - Dependencies: Jquery (http://jquery.com/) [ & Projekktor (http://projekktor.com) ]
 - Demo & config: index.html
 
+<h2>API</h2>
+<h4>Events:</h4>
+- ready
+- setVideo
+- play
+- firstPlay
+- pause
+- stop
+- ended
+- timeupdate
+- error
+- seeking
+- seeked
+
+<h4>Methods:</h4>
+- setPlay
+- setPause
+- getCurrentVideo
+- getCurrentTime
+- addItem
+- removeItem
+
 <h2>LICENSE</h2>
-Video.js is licensed under the Mozilla Public License, Version 2.0. View the <a href="https://github.com/maxinminax/VP9.player/blob/master/LICENSE">license file</a>
+VP9TV-PLAYER is licensed under the Mozilla Public License, Version 2.0. View the <a href="https://github.com/maxinminax/VP9.player/blob/master/LICENSE">license file</a>
