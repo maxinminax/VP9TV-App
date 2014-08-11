@@ -5,7 +5,7 @@ VP9TV's player
 
 - Modal:
 <pre>player __ player.html5      __ htm5 video tag api (for android mobile)
-          |__ player.projekktor __ projekktor video player api (for destop version)</pre>
+          |__ player.projekktor __ projekktor video player api (for desktop version)</pre>
 - Dependencies: Jquery (http://jquery.com/) [ & Projekktor (http://projekktor.com) ]
 - Demo & config: index.html
 
