@@ -9,8 +9,12 @@ VP9TV's player
 - Dependencies: Jquery (http://jquery.com/) [ & Projekktor (http://projekktor.com) ]
 - Demo & config: index.html
 
+<h2>Usage</h2>
+<pre>var player = new VP9.player(<options>)</pre>
+
 <h2>API</h2>
 <h4>Events:</h4>
+Usage: <pre>player.on(<event>, <callback>)</pre>
 - ready
 - setVideo
 - play
@@ -24,6 +28,7 @@ VP9TV's player
 - seeked
 
 <h4>Methods:</h4>
+Usage: <pre>player.<method>(<arguments>)</pre>
 - setPlay
 - setPause
 - getCurrentVideo
