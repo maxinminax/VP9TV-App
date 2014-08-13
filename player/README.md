@@ -10,11 +10,11 @@ VP9TV's player
 - Demo & config: index.html
 
 <h2>Usage</h2>
-<pre>var player = new VP9.player(<options>)</pre>
+<pre>var player = new VP9.player(&lt;options&gt;)</pre>
 
 <h2>API</h2>
 <h4>Events:</h4>
-Usage: <pre>player.on(<event>, <callback>)</pre>
+Usage: <pre>player.on(&lt;event&gt;, &lt;callback&gt;)</pre>
 - ready
 - setVideo
 - play
@@ -28,7 +28,7 @@ Usage: <pre>player.on(<event>, <callback>)</pre>
 - seeked
 
 <h4>Methods:</h4>
-Usage: <pre>player.<method>(<arguments>)</pre>
+Usage: <pre>player.&lt;method&gt;(&lt;arguments&gt;)</pre>
 - setPlay
 - setPause
 - getCurrentVideo
