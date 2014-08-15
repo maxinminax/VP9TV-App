@@ -17,7 +17,7 @@ VP9.playerHTML5 = function(player) {
 		//init plugin before set video
     	player.plugins.init();
 
-		//this.ui.hideControls();
+		this.ui.hideControls();
 
 	    //onclick
 	    player.$playBtn.on('click', function() {
@@ -344,6 +344,7 @@ VP9.playerHTML5 = function(player) {
 				func.call(this);
 			}
 			else {
+				this.ui.hideControls();
 				player.onFirstPlay(func);
 			}
 		});
